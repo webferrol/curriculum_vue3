@@ -5,6 +5,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
+    meta: {title: 'Inicio'},
     component: Home
   },
   {
@@ -19,7 +20,15 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
+  base: process.env.BASE_URL,
   routes
 })
+
+
+//https://router.vuejs.org/guide/advanced/navigation-guards.html#global-before-guards
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title;
+  next();
+});
 
 export default router
