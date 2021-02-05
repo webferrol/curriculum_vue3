@@ -1,30 +1,37 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+  <MainMenu />
   <router-view/>
+  <MainFooter />
 </template>
 
+<script>
+import MainMenu from '@/components/MainMenu.vue'
+import MainFooter from '@/components/MainFooter.vue'
+export default {
+  components:{
+    MainMenu,
+    MainFooter
+  }
+}
+</script>
+
 <style lang="scss">
+
+html{
+  box-sizing: border-box;
+  font-size: 100%;
+}
+*,*::before,*::after{
+  box-sizing: inherit;
+}
 #app {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
 }
 </style>
