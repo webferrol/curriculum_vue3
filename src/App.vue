@@ -24,6 +24,9 @@ html{
 *,*::before,*::after{
   box-sizing: inherit;
 }
+h1{
+  color: salmon;
+}
 #app {
   display: grid;
   grid-template-rows: auto 1fr auto;

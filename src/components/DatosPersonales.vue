@@ -18,7 +18,7 @@
                 <h1>Competencias</h1>
             </header>
             <ul class="datos-personales__list">
-                <li v-for="(item,key) of datos.conocimientos" :key="key"><strong>{{item.conocimiento}}</strong><em :class="{ destacado: item.nivel.toLowerCase()=='alto'}">{{item.nivel}}</em></li>
+                <li v-for="(item,key) of datos" :key="key"><strong>{{item.conocimiento}}</strong><em :class="{ destacado: item.nivel.toLowerCase()=='alto'}">{{item.nivel}}</em></li>
             </ul>
         </section>
     </div> 
@@ -49,9 +49,9 @@ $border-color: $light;
 .datos-personales{
     display: flex;
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 300px;
+    // margin-left: auto;
+    // margin-right: auto;
+    // max-width: 300px;
     .datos-personales__figure{
         margin: 0;
         img{
@@ -81,7 +81,7 @@ $border-color: $light;
         }
         h1{
             text-align: center;
-            color: salmon;
+            
         }
     }
     .datos-personales__list{

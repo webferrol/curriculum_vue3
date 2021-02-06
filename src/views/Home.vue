@@ -1,10 +1,10 @@
 <template>
   <div class="home grid">
     <div class="col-4">      
-      <datos-personales nombre='Xurxo González Tenreiro' :datos="formacionAcademica"></datos-personales>
+      <datos-personales nombre='Xurxo González Tenreiro' :datos="formacionAcademica.conocimientos"></datos-personales>
     </div>
     <div class="col-8">
-      <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <formacion-academica :formacionAcademica="formacionAcademica.formacion_academica" :formacionComplementaria="formacionAcademica.formacion_complementaria"></formacion-academica>
     </div>    
   </div>
 </template>
@@ -12,6 +12,7 @@
 <script>
 
 import DatosPersonales from '@/components/DatosPersonales.vue'
+import FormacionAcademica from '@/components/FormacionAcademica.vue'
 
 import {mapState,mapActions} from "vuex"
 
@@ -24,7 +25,8 @@ export default {
     ...mapActions(['getFormacionAcademica'])
   },
   components: {
-    'datos-personales': DatosPersonales
+    'datos-personales': DatosPersonales,
+    'formacion-academica': FormacionAcademica
   },
   beforeMount(){
     this.$store.dispatch('getFormacionAcademica');
@@ -45,7 +47,8 @@ export default {
         //background: orange;
       }
       .col-8{
-        grid-column: 6 / 6 span;        
+        grid-column: 6 / 6 span; 
+        padding-left: .5em;        
         //background: lavenderblush;
       }
     }
@@ -55,7 +58,8 @@ export default {
         //background: orange;
       }
       .col-8{
-        grid-column: 5 / 7 span;        
+        grid-column: 5 / 7 span;
+              
         //background: red;
       }
     }
