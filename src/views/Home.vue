@@ -10,7 +10,7 @@
 </template>
 
 <script>
-// @ is an alias to /src
+
 import DatosPersonales from '@/components/DatosPersonales.vue'
 
 import {mapState,mapActions} from "vuex"
