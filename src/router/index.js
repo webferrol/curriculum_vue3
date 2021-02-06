@@ -5,7 +5,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    meta: {title: 'Inicio'},
+    meta: {title: 'Formación académica'},
     component: Home
   },
   {
