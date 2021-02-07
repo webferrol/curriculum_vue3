@@ -1,7 +1,7 @@
 <template>
   <div class="home grid">
     <div class="col-4">      
-      <datos-personales nombre='Xurxo González Tenreiro' :datos="formacionAcademica.conocimientos"></datos-personales>
+      <datos-personales nombre="Xurxo González Tenreiro" :datos="formacionAcademica.conocimientos"></datos-personales>
     </div>
     <div class="col-8">
       <formacion-academica :formacionAcademica="formacionAcademica.formacion_academica" :formacionComplementaria="formacionAcademica.formacion_complementaria"></formacion-academica>
@@ -40,8 +40,11 @@ export default {
   .grid{
     display: grid;
     grid-template-rows: auto auto;
+    gap: 12px;
+    padding: .5em;
     @media (min-width: $tablet){
       grid-template-columns: repeat(12,1fr);
+      padding: 0;
       .col-4{
         grid-column: 2 / 4 span;
         //background: orange;

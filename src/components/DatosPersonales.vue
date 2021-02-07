@@ -27,7 +27,21 @@
 <script>
 
 export default {
-    props:['nombre','datos'],
+    // props:['nombre','datos'],
+    props:{
+        nombre:{
+            type: String,
+            required: false,
+            default: '',
+            validator: (value) => /^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/.test(value)
+            
+        },
+        datos:{
+            type: Array,
+            required: false,
+            default: () => ([])
+        }
+    },
     data(){
         return {
             datos_personales:[
@@ -46,12 +60,13 @@ export default {
 <style lang="scss" scoped>
 $light: rgba(grey,.3);
 $border-color: $light;
+$max-width: 400px;
 .datos-personales{
     display: flex;
     flex-direction: column;
-    // margin-left: auto;
-    // margin-right: auto;
-    // max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $max-width;
     .datos-personales__figure{
         margin: 0;
         img{

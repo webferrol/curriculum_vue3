@@ -28,7 +28,19 @@
 <script>
 export default {
     name: 'FormacionAcademica',
-    props: ['formacionAcademica','formacionComplementaria']
+    //props: ['formacionAcademica','formacionComplementaria']
+    props:{
+        formacionAcademica:{
+            type: Array,
+            required: false,
+            default: () => []
+        },
+        formacionComplementaria:{
+            type: Array,
+            required: false,
+            default: () => []
+        }
+    }
 }
 </script>
 
