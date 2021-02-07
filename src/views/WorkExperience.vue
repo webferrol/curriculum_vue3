@@ -10,7 +10,7 @@
           <dl>
             <template  v-for="(item,key) of experienciaLaboral.experiencias" :key="key">
               <dt>{{item.titulo}}</dt>
-              <dd>{{item.puesto}} {{item.fecha}}</dd>
+              <dd><em>Puesto</em>: {{item.puesto}} | <em>Fecha</em>: {{item.fecha}} | <em>Empresa</em>: {{item.empresa}} | <em>Lugar</em>: {{item.lugar}}</dd>
             </template>
           </dl>
          
