@@ -33,38 +33,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-  $tablet: 720px;
-  $pc: 1200px;
-  .grid{
-    display: grid;
-    grid-template-rows: auto auto;
-    gap: 12px;
-    padding: .5em;
-    @media (min-width: $tablet){
-      grid-template-columns: repeat(12,1fr);
-      padding: 0;
-      .col-4{
-        grid-column: 2 / 4 span;
-        //background: orange;
-      }
-      .col-8{
-        grid-column: 6 / 6 span; 
-        padding-left: .5em;        
-        //background: lavenderblush;
-      }
-    }
-    @media (min-width: $pc){
-      .col-4{
-        grid-column: 2 / 3 span;
-        //background: orange;
-      }
-      .col-8{
-        grid-column: 5 / 7 span;
-              
-        //background: red;
-      }
-    }
-  }
-</style>
