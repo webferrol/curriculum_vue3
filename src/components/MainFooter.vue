@@ -1,8 +1,10 @@
 <template>
     <footer class="main-footer">
-       <a href="https://www.webferrol.com">WEBFerrol.com</a>
+       <slot><a target="blank" href="https://www.webferrol.com">WEBFerrol.com</a></slot>
     </footer>
 </template>
+
+
 
 
 <style lang="scss" scoped>
